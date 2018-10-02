@@ -19,6 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Proteção para o grupo, só ver quem está logado
+Route::group(['middleware' => 'auth'], function (){
+
+    $this->resource('atletas','AtletaController');
+    $this->post('atleta','AtletaController@store')->name('atleta.store');
+
+});
+
 
 
 
