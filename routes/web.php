@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/Atleta/CadastrarAtleta', '\Atleta\CadastrarAtletaController@index')->name('cadastrarAtleta');
-Route::get('/Atleta/GerenciarAtleta', 'CadastrarAtletaController@listaratleta')->name('GerenciarAtleta');
+
 
 
