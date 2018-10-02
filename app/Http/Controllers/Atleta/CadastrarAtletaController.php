@@ -23,6 +23,6 @@ class CadastrarAtletaController extends Controller
      */
     public function index()
     {
-        return view('Atletas/cadastrarAtleta');
+        return view('atletas/cadastrarAtleta');
     }
 }

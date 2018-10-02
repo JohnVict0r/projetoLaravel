@@ -19,7 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/Atleta/CadastrarAtleta', '\Atleta\CadastrarAtletaController@index')->name('cadastrarAtleta');
-Route::get('/Atleta/GerenciarAtleta', 'CadastrarAtletaController@listaratleta')->name('GerenciarAtleta');
+//Proteção para o grupo, só ver quem está logado
+Route::group(['middleware' => 'auth'], function (){
+
+    $this->resource('atletas','AtletaController');
+    $this->post('atleta','AtletaController@store')->name('atleta.store');
+
+});
+
+
 
 

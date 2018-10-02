@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    laravel
+                    Sistema de Atletas
                 </div>
 
             </div>
